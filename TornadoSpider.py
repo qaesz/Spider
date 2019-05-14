@@ -1,6 +1,7 @@
 from pyquery import PyQuery as pq
 from tornado import ioloop, gen, httpclient, queues
 from urllib.parse import urljoin
+import time
 
 class TornadoScrapy():
     def __init__(self,url):
@@ -80,8 +81,7 @@ class TornadoScrapy():
 
 
 
-if __name__ == '__main__':
-    import time,requests
+if __name__ == '__main__':    
     start = time.time()
     for i in range(1,20):
         url = 'https://list.iqiyi.com/www/1/-------------11-'+str(i)+'-1-iqiyi--.html'
